@@ -1,7 +1,14 @@
 <template>
   <div>
     <h2>메인홈</h2>
-
+    <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide>Slide 2</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+      <swiper-slide>Slide 4</swiper-slide>
+      <swiper-slide>Slide 5</swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
     <div class="dd" data-aos="fade-up">dfkjasklfjaskldfjkl</div>
     <div class="dd" data-aos="fade-in">asdkfjasdkl</div>
     <div class="dd" data-aos="fade-right">dddd</div>
@@ -14,12 +21,46 @@
 </template>
 
 <script>
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+
 export default {
   name: "MainHome",
-
-  components: {},
+  data() {
+    return {
+      swiperOptions: {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      },
+    };
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.$swiper;
+    },
+  },
+  directives: {
+    swiper: directive,
+  },
   mounted() {
     import("aos").then((AOS) => AOS.init());
+    this.swiper.slideTo(3, 1000, false);
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
   },
 };
 </script>
