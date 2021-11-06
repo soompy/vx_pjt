@@ -1,0 +1,17 @@
+@import "../mixin";
+
+#header {
+  border-bottom: 1px solid #ccc;
+  .inner {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    margin: auto;
+  }
+  .gnb {
+    @include flex-center-layout;
+    li {
+      margin: 0 30px;
+    }
+  }
+}
