@@ -15,6 +15,9 @@
           <li><a href="/company">회사소개</a></li>
           <li><a href="/history">연혁</a></li>
           <li><a href="/recruit">채용</a></li>
+          <li><a href="/test1">테스트1</a></li>
+          <li><a href="/test2">테스트2</a></li>
+          <li><a href="/test3">테스트3</a></li>
         </ul>
       </div>
     </header>

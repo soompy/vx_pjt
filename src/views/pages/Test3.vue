@@ -1,47 +1,16 @@
 <template>
   <div id="app">
     <section id="visual">
-      <div class="glass"></div>
-       
-       <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
-        <div :style="cursorCircle" class="g-cursor__circle"></div>
-        <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
-      </div>
+      <following-mouse></following-mouse>
     </section>
-
-    <section class="section">
-      <div class="container" style="display: flex;">
-        <div class="" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">오른쪽</div>
-        <div style="margin-left: auto;" class="" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-cubic">왼쪽</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container" style="display: flex;">
-        <div class="" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">오른쪽</div>
-        <div style="margin-left: auto;" class="" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">왼쪽</div>
-      </div>
-    </section>
-
-
-    <section class="">
-      <div class="" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">페이드 업</div>
-    </section>
-
-    <!-- <section class="section" v-for="list in items">
-      <card-list></card-list>
-    </section> -->
-    
-
-
   </div>
 </template>
 
 <script>
-import CardList from '../components/list/cardList.vue';
+import FollowingMouse from '../../components/FollowingMouse.vue';
 
 export default {
-  name: "MainHome",
+  name: "Test3",
   data() {
     return {
       Child: 0,
@@ -53,7 +22,7 @@ export default {
     };
   },
   components: {
-    CardList,
+    FollowingMouse
     
   },
   computed: {

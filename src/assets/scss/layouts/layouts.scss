@@ -12,6 +12,19 @@
     @include flex-center-layout;
     li {
       margin: 0 30px;
+      a {
+        color: $color-black;
+      }
     }
   }
+}
+
+#visual {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('https://meeco.kr/files/attach/images/48269/911/282/028/d5dc431105015633890143cd9884298f.JPG') center center no-repeat;
+  background-size: cover;
 }
