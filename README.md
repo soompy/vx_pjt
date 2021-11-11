@@ -1,4 +1,4 @@
-# test-vuefity
+# kakaoVX
 
 ## Project setup
 ```
