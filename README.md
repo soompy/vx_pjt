@@ -32,3 +32,5 @@ https://uipac.com/88
 
 타이핑
 vue-typer  https://cngu.github.io/vue-typer/
+
+뷰 라이브러리들 https://www.jqwidgets.com/vue-components-documentation/documentation/jqxcolorpicker/vue-colorpicker-getting-started.htm?search=
